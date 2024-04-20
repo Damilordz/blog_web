@@ -1,0 +1,270 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+header {
+  background-color: #10439f;
+  color: #f3f3f3;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.header-wrap{
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.blog-logo {
+  margin-right: 1%;
+}
+
+.blog-logo img{
+  height: 4rem;
+  width: 4rem;
+}
+
+.header-title h1{
+  font-size: 2.2rem;
+}
+
+.nav-menu {
+  margin-top: 1rem;
+  margin-left: 15%;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20%;
+}
+
+.nav-menu a:hover {
+  color: #add8e6;
+}
+
+a {
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+main {
+  max-width: 60%;
+  margin: 4.55rem auto;
+  min-height: 70vh;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.blog-form {
+  margin-bottom: 4rem;
+}
+
+.blog-form p {
+  margin-bottom: 0.5rem;
+  color: #9f102d;
+}
+
+.blog-form h4 {
+  margin-bottom: 1rem;
+}
+
+.blog-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  padding: 0.5rem;
+  margin: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+#content {
+  margin: 1rem 0;
+  height: 10rem;
+}
+
+.blog-form label {
+  font-weight: 900;
+}
+
+#submit {
+  background-color: #10439f;
+  color: #f3f3f3;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.blog-posts {
+  line-height: 1.5;
+}
+
+.blog-posts h2 {
+  margin-bottom: 1rem;
+}
+
+.post {
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.post h3 {
+  color: #10439f;
+}
+
+.btn {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 0.4rem 0.2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.edit-button {
+  background-color: #4caf50; /* Green */
+  display: inline-block;
+}
+
+.delete-button {
+  background-color: #f44336; /* Red */
+  display: inline-block;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  opacity: 0.7;
+}
+
+.post button {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+footer {
+  background: #10439f;
+  color: #f3f3f3;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  margin-top: 2.5rem;
+}
+
+.about-section {
+  line-height: 1.5;
+  padding: 3rem;
+  text-align: center;
+}
+
+.about-section a {
+  color: #10439f;
+}
+
+.about-section a:hover {
+  opacity: 0.7;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section label {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section input {
+  width: 50%;
+  padding: 0.5rem;
+}
+
+.contact-section textarea {
+  width: 50%;
+  height: 20vh;
+  margin-bottom: 1rem;
+}
+
+.contact-button{
+    background-color: #10439f;
+}
+
+@media (max-width: 576px) {
+  main {
+    max-width: 90%;
+    min-height: 60vh;
+    padding: 1.5rem;
+  }
+
+  .header-wrap{
+    width: 90%;
+    margin: auto;
+  }
+
+  .header-title h1 {
+    display: none;
+  }
+
+  .nav-menu {
+    margin-left: 13%;
+  }
+
+  .about-section {
+    padding: 0;
+  }
+
+  .contact-section input {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  
+  .contact-section textarea {
+    width: 100%;
+    height: 20vh;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  main {
+    max-width: 80%;
+  }
+
+  .header-wrap{
+    width: 80%;
+  }
+}

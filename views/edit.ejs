@@ -1,0 +1,18 @@
+<%- include("./partial/header.ejs") %>
+
+<main class="container">
+  <section class="blog-form">
+    <h2>Edit your post</h2>
+    <form action="/save" method="POST">
+      <!-- Add hidden input for post ID -->
+      <input type="hidden" name="postId" value="<%= postId %>" />
+      <label for="title"> Title:</label>
+      <input type="text" name="title" id="title" placeholder="Title" value="<%= post.title %>"/>
+      <label for="content" class="m-t">Content:</label>
+      <textarea name="content" id="content" placeholder="content"><%= post.content %></textarea>
+      <input type="submit" value="Save" id="submit" />
+    </form>
+  </section>
+</main>
+
+<%- include("./partial/footer.ejs") %>

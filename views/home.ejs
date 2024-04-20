@@ -1,0 +1,45 @@
+<!-- Include the header partial -->
+<%- include("./partial/header.ejs") %> 
+
+<main id="container">
+  <!-- Form for creating a new post -->
+  <section class="blog-form">
+    <h2>Create New Post</h2>
+    <p><%= postInfo %></p>
+    <form action="/post" method="POST">
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" placeholder="Title" />
+      <label for="content" class="m-t">Content:</label>
+      <textarea name="content" id="content" placeholder="Content"></textarea>
+      <input type="submit" value="Create post" id="submit" />
+    </form>
+  </section>
+
+  <!-- Section for displaying existing blog posts -->
+  <section class="blog-posts">
+    <h2>Blog Posts</h2>
+    <% posts.forEach(post => { %>
+    <div class="post">
+      <h3><%= post.title %></h3>
+      <p class="p-published"><b>Published on:</b> <%= new Date(); %></p>
+      <p><%= post.content %></p>
+
+      <!-- Buttons for editing and deleting posts -->
+      <div class="btn">
+        <form action="/edit" method="POST">
+          <input type="hidden" name="postId" value="<%= post.id %>" />
+          <button type="submit" class="btn edit-button">Edit</button>
+        </form>
+
+        <form action="/delete" method="POST">
+          <input type="hidden" name="postId" value="<%= post.id %>" />
+          <button type="submit" class="btn delete-button">Delete</button>
+        </form>
+      </div>
+    </div>
+    <% }) %>
+  </section>
+</main>
+
+<!-- Include the footer partial -->
+<%- include("./partial/footer.ejs") %> 
